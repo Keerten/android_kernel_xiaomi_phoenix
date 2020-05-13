@@ -3178,6 +3178,7 @@ static struct platform_driver nvt_driver = {
 #ifdef CONFIG_OF
 		.of_match_table = nvt_match_table,
 #endif
+		.probe_type = PROBE_PREFER_ASYNCHRONOUS,
 	},
 };
 
