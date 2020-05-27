@@ -314,7 +314,6 @@ static int hiddev_open(struct inode *inode, struct file *file)
 	mutex_lock(&hiddev->existancelock);
 	res = hiddev->exist ? __hiddev_open(hiddev, file) : -ENODEV;
 	mutex_unlock(&hiddev->existancelock);
-
 	return res;
 }
 
