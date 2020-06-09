@@ -37,7 +37,7 @@ err() {
 KERNEL_DIR=$PWD
 
 # Kernel Version
-VERSION="2.0"
+VERSION="2.1"
 
 # The name of the Kernel, to name the ZIP
 ZIPNAME="StormBreaker-$VERSION"
@@ -57,7 +57,7 @@ DEFCONFIG=vendor/phoenix-perf_defconfig
 COMPILER=clang
 
 # Clean source prior building. 1 is NO(default) | 0 is YES
-INCREMENTAL=1
+INCREMENTAL=0
 
 # Push ZIP to Telegram. 1 is YES | 0 is NO(default)
 PTTG=1
@@ -130,7 +130,7 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 	if [ $COMPILER = "clang" ]
 	then
 		msg "|| Cloning Clang-11 ||"
-		git clone --depth=1 https://github.com/Panchajanya1999/azure-clang.git clang-llvm
+		git clone --depth=1 https://github.com/kdrag0n/proton-clang.git clang-llvm
 
 		# Toolchain Directory defaults to clang-llvm
 		TC_DIR=$KERNEL_DIR/clang-llvm
@@ -152,7 +152,8 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 ##------------------------------------------------------##
 
 exports() {
-	export KBUILD_BUILD_USER="danascape"
+	export KBUILD_BUILD_USER="CryllicBuster273"
+        export KBUILD_BUILD_HOST="StormBreakerBot"
 	export ARCH=arm64
 	export SUBARCH=arm64
 
