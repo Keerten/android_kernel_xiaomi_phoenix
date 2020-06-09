@@ -204,7 +204,7 @@ build_kernel() {
 	if [ $INCREMENTAL = 0 ]
 	then
 		msg "|| Cleaning Sources ||"
-		make clean && make mrproper && rm -rf out
+		make clean && make mrproper && rm -rf out && rm -rf AnyKernel3/Image.gz-dtb && rm -rf AnyKernel3/*.zip
 	fi
 
 	if [ "$PTTG" = 1 ]
