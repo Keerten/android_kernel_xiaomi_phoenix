@@ -37,7 +37,7 @@ err() {
 KERNEL_DIR=$PWD
 
 # Kernel Version
-VERSION="2.1"
+VERSION="2.2"
 
 # The name of the Kernel, to name the ZIP
 ZIPNAME="StormBreaker-$VERSION"
